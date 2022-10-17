@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woodforde</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/63c22fb8eb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Landing Page -->
+    <section id="landing-page">
+        <!-- Navigation Bar -->
+        <nav>
+            <!-- logo -->
+            <figure
+                class="personalLogo"
+            >
+                <img src="./assets/temp_profile.jpg" alt="" />
+            </figure>
+            <ul class="navLink__list">
+                <li class="navLink click">
+                    <a
+                        class="
+                            navLink__anchor
+                            link__hover-effect
+                            link__hover-effect--black
+                        "
+                        href="#"
+                    >About</a>
+                </li>
+                <li class="navLink click">
+                    <a
+                        class="
+                            navLink__anchor
+                            link__hover-effect
+                            link__hover-effect--black
+                        "
+                        href="#projects"
+                    >Projects</a>
+                </li>
+                <li class="navLink click">
+                    <a
+                        class="
+                            navLink__anchor
+                            link__hover-effect
+                            link__hover-effect--black
+                        "
+                        href="#"
+                        onclick="toggleModal()"
+                    >Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Header -->
+        <header class="header">
+            <div class="headerContent">
+                <h1>Hi</h1>
+                <h1 class="highlight">I'm Ben</h1>
+                <p>
+                    I'm a <b class="highlight">Frontend Software Engineer</b> with a 
+                    strong passion for creating web applications with a great user experience.
+                    <br>
+                    Here's a bit more <b class="highlight click">about me:</b>
+                </p>
+                <div class="socialLink__list">
+                    <a
+                        class="socialLink click"
+                        href="https://www.linkedin.com/in/benjamin-woodforde/"
+                        target="_blank"
+                    >
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a
+                        class="socialLink click"
+                        href="https://github.com/woodforde"
+                        target="_blank"
+                    >
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a
+                        class="socialLink click"
+                        href=""
+                    >
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <a  
+            class="scroll"
+            href="#projects"
+        >
+            <div class="scroll__icon click"></div>
+        </a>
+        <a href="#">
+            <button class="mailButton">
+                <i class="fa-solid fa-envelope"></i>
+            </button>
+        </a>
+        <!-- Modal Popup -->
+        <div class="modal">
+            <div class="modal__half modal__left">
+                <h3>Here's a bit about me</h3>
+                <h4>Frontend Software Engineer</h4>
+                <p>
+                    I'm a 21 year-old Australian <b class="highlight">frontend software engineer</b>
+                    with a strong passion for developing websites with great <b class="highlight">user
+                    experiences.</b>
+                    <br>
+                    <br>
+                    I currently work on extrememly difficult engineering problems and learn from a team
+                    consisting of some of the most talented and experienced software engineers every day.
+                </p>
+            </div>
+            <div class="modal__half modal__right">
+                <i
+                    class="fa-solid fa-xmark modal__close click"
+                    onclick="toggleModal()"
+                ></i>
+                <h3>Let's have a chat!</h3>
+                <h4>I'm currently open to new opportunities</h4>
+                <form
+                    class="contactForm"
+                    onsubmit="contact(event)"
+                >
+                    <div class="contactForm__item">
+                        <label class="contactForm__itemLabel">Name</label>
+                        <input
+                            class="input"
+                            name="user_name"
+                            type="text"
+                            required
+                        />
+                    </div>
+                    <div class="contactForm__item">
+                        <label class="contactForm__itemLabel">E-mail</label>
+                        <input
+                            class="input"
+                            name="user_email"
+                            type="email"
+                            required
+                        />
+                    </div>
+                    <div class="contactForm__item">
+                        <label class="contactForm__itemLabel">Message</label>
+                        <textarea
+                            class="input"
+                            name="message"
+                            type="text"
+                            required
+                        ></textarea>
+                    </div>
+                    <button class="contactForm__button">Send it my way</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Language Experience -->
+    <section id="languages">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title"><span class="highlight">Languages</span> I have used before</h1>
+            </div>
+        </div>
+    </section>
+    <!-- Projects -->
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">Here are some of my <span class="highlight">projects</span></h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <div class="project__bg"></div>
+                            <img
+                                class="project__img"
+                                src="./assets/temp_project_img.png"
+                                alt=""
+                            />
+                            <div class="project__description">
+                                <h3>Project Name</h3>
+                                <h4>Project Technologies</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit numquam necessitatibus quos saepe, nam sapiente quod sunt, obcaecati, alias facere assumenda amet! Dicta quasi praesentium sequi, temporibus enim illo optio.</p>
+                                <div class="projectLink__list">
+                                    <a 
+                                        class="projectLink click"
+                                        href="">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a 
+                                        class="projectLink click"
+                                        href="">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+                <ul class="footerLink__list">
+                    <li class="footerLink click">
+                        <a
+                            class="
+                                footerLink__anchor
+                                link__hover-effect
+                                link__hover-effect--white"
+                            href=""
+                        >Github</a>
+                    </li>
+                    <li class="footerLink click">
+                        <a
+                            class="
+                                footerLink__anchor
+                                link__hover-effect
+                                link__hover-effect--white"
+                            href=""
+                        >LinkedIn</a>
+                    </li>
+                    <li class="footerLink click">
+                        <a
+                            class="
+                                footerLink__anchor
+                                link__hover-effect
+                                link__hover-effect--white"
+                            href=""
+                        >Contact</a>
+                    </li>
+                    <li class="footerLink click">
+                        <a
+                            class="
+                                footerLink__anchor
+                                link__hover-effect
+                                link__hover-effect--white"
+                            href=""
+                        >Resume</a>
+                    </li>
+                </ul>
+                <div class="footerCopyright">Copyright &copy; 2022 Benjamin Woodforde</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

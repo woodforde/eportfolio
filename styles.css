@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global Variables */
+body {
+    --main-color: rgb(148, 87, 172);
+}
+
+/* Element Styling */
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* Reusable Styling */
+.container {
+    width: 100%;
+    padding: 48px 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 12px;
+    margin: 0 auto;
+}
+
+.section__title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 100px;
+}
+
+.link__hover-effect {
+    position: relative;
+}
+.link__hover-effect::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 0;
+    bottom: -3px;
+    right: 0;
+    transition: all 300ms ease;
+}
+.link__hover-effect:hover::after {
+    left: 0;
+    width: 100%;
+}
+.link__hover-effect--black::after {
+    background-color: black;
+}
+.link__hover-effect--white::after {
+    background-color: whitesmoke;
+}
+
+.highlight {
+    color: var(--main-color); 
+}
+
+.click {
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.click:hover {
+    transform: scale(1.1);
+}
+.click:active {
+    transform: scale(0.9);
+}
+
+/* LANDING PAGE */
+#landing-page {
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 12px;
+    margin: 0 auto;
+}
+
+.personalLogo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.personalLogo > img {
+    height: 100%;
+}
+
+.navLink__list {
+    display: flex;
+    align-items: center;
+}
+
+.navLink {
+    margin: 0 8px;
+}
+
+.navLink__anchor {
+    color: black;
+    font-weight: 700;
+}
+
+/* Header */
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 32px;
+}
+
+.headerContent > h1 {
+    font-size: 120px;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.headerContent > p {
+    font-size: 24px;
+    line-height: 2;
+    max-width: 468px;
+}
+
+.socialLink__list {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(148, 87, 172);
+    color: whitesmoke;
+    font-size: 16px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    margin: 0 8px;
+}
+
+/* Landing Page Scroll Icon */
+.scroll {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.scroll__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 32px;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+.scroll__icon::after {
+    content: "";
+    height: 8px;
+    width: 4px;
+    border-radius: 4px;
+    background-color: black;
+    animation: scrollBounce 1000ms infinite alternate-reverse;
+}
+
+@keyframes scrollBounce {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Mail Button */
+.mailButton {
+    position: fixed;
+    background-color: #242424;
+    color: whitesmoke;
+    bottom: 20px;
+    right: 20px;
+    font-size: 48px;
+    height: 100px;
+    width: 100px;
+    border: none;
+    border-radius: 50%;
+}
+
+/* Modal Popup */
+.modal {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    overflow: hidden;
+    border-radius: 28px;
+    height: 700px;
+    width: 90%;
+    max-width: 1100px;
+}
+
+.modal__close {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    font-size: 40px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    transition: all 150ms ease;
+}
+.modal__close:hover {
+    background-color: whitesmoke;
+    color: var(--main-color);
+    border-radius: 50%;
+}
+
+.modal__half {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 72px;
+    transition: all 300ms ease-in;
+}
+
+.modal__half > h3 {
+    font-size: 26px;
+}
+.modal__half > h4 {
+    font-size: 14px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.modal__left {
+    color: black;
+    background-color: whitesmoke;
+    transform: translateX(-100%);
+}
+.modal__right {
+    color: white;
+    background-color: #242424;
+    transform: translateX(100%);
+}
+
+.modal__left > p {
+    line-height: 1.75;
+}
+
+.contactForm__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.contactForm__itemLabel {
+    font-size: 14px;
+}
+
+.contactForm__item > input,
+.contactForm__item > textarea {
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    height: 40px;
+    padding-left: 8px;
+}
+
+.contactForm__item > textarea {
+    resize: vertical;
+    height: 120px;
+    margin-top: 8px;
+}
+
+.contactForm__item > input:focus,
+.contactForm__item > textarea:focus {
+    border-color: var(--main-color);
+}
+
+.contactForm__button {
+    background-color: var(--main-color);
+    color: whitesmoke;
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.contactForm__button:hover {
+    background-color: #242424;
+    border: 2px solid whitesmoke    ;
+}
+
+/* Open Modal */
+.modal--open .modal {
+    visibility: visible;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+}
+.modal--open .modal__left,
+.modal--open .modal__right {
+    transform: translateX(0);
+}
+nav,
+.header,
+.scroll {
+    visibility: visible;
+    opacity: 1;
+    transition: all 600ms 400ms;
+}
+.modal--open nav,
+.modal--open .header,
+.modal--open .scroll {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 400ms;
+}
+
+/* PROJECTS */
+.project {
+    margin-bottom: 100px;
+}
+
+.project__wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
+}
+.project__wrapper:hover .project__bg {
+    opacity: 0.7;
+}
+.project__wrapper:hover .project__img {
+    transform: scale(1.1);
+    filter: blur(5px);
+}
+.project__wrapper:hover .project__description {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.project__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #242424;
+    opacity: 0;
+    z-index: 5;
+    transition: all 300ms ease;
+}
+
+.project__img {
+    width: 100%;
+    transition: all 450ms ease;
+}
+
+.project__description {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(100%);
+    max-width: 550px;
+    color: white;
+    opacity: 0;
+    z-index: 10;
+    transition: opacity 300ms ease, transform 450ms ease;
+}
+
+.project__description > h3 {
+    font-size: 40px;
+}
+
+.project__description > h4 {
+    font-size: 24px;
+    margin-top: 12px;
+}
+
+.project__description > p {
+    margin-top: 12px;
+}
+
+.projectLink__list {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.projectLink {
+    color: white;
+    font-size: 20px;
+    margin: 0 8px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #242424;
+    padding: 4% 0;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerLink__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 500px;
+}
+
+.footerLink__anchor {
+    color: white;
+}
+
+.footerCopyright {
+    text-align: center;
+    color: white;
+    margin-top: 32px;
+}
