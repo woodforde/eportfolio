@@ -25,6 +25,10 @@ li {
     list-style: none;
 }
 
+section {
+    transition: all 300ms ease;
+}
+
 /* Reusable Styling */
 .container {
     width: 100%;
@@ -42,6 +46,7 @@ li {
     text-align: center;
     font-size: 48px;
     margin-bottom: 100px;
+    transition: all 300ms ease;
 }
 
 .link__hover-effect {
@@ -80,6 +85,38 @@ li {
 }
 .click:active {
     transform: scale(0.9);
+}
+
+/* Dark Mode */
+.dark-mode .navLink__anchor,
+.dark-mode .headerContent > h1,
+.dark-mode .headerContent > p,
+.dark-mode .section__title,
+.dark-mode .technicalSkill__category,
+.dark-mode .technicalSkill {
+    color: whitesmoke;
+}
+
+.dark-mode .link__hover-effect--black::after {
+    background-color: whitesmoke;
+}
+
+.dark-mode .scroll__icon {
+    border-color: whitesmoke;
+    background-color: whitesmoke;
+}
+
+.dark-mode .mailButton {
+    background-color: whitesmoke;
+    color: #242424;
+}
+
+.dark-mode section {
+    background-color: #242424;
+}
+
+.dark-mode .technicalSkill__divider {
+    background-color: whitesmoke;
 }
 
 /* LANDING PAGE */
@@ -121,6 +158,7 @@ nav {
 .navLink__anchor {
     color: black;
     font-weight: 700;
+    transition: all 300ms ease;
 }
 
 /* Header */
@@ -138,12 +176,14 @@ nav {
     font-size: 120px;
     margin-bottom: 12px;
     line-height: 1;
+    transition: all 300ms ease;
 }
 
 .headerContent > p {
     font-size: 24px;
     line-height: 2;
-    max-width: 468px;
+    max-width: 600px;
+    transition: all 300ms ease;
 }
 
 .socialLink__list {
@@ -412,6 +452,8 @@ nav,
     background-color: #242424;
     opacity: 0.2;
     margin: 20px auto;
+    border-radius: 4px;
+    transition: all 300ms ease;
 }
 
 /* PROJECTS */

@@ -9,6 +9,7 @@ const frameworksElement = document.querySelector('.frameworks')
 const technologiesElement = document.querySelector('.technologies')
 
 let modalIsOpen = false;
+let darkModeIsOn = false;
 
 // On Click and Submission Functions
 function contact(event) {
@@ -23,6 +24,15 @@ function toggleModal() {
         document.body.classList += (" modal--open");
     }
     modalIsOpen = !modalIsOpen;
+}
+
+function toggleContrast() {
+    if (darkModeIsOn) {
+        document.body.classList.remove("dark-mode");
+    } else {
+        document.body.classList += (" dark-mode");
+    }
+    darkModeIsOn = !darkModeIsOn;
 }
 
 // Convert technical skills to HTML
