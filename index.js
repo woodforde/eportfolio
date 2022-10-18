@@ -85,18 +85,40 @@ const projects = [
     {
         title: "Movie Finder",
         technologies: "React, HTML, CSS",
-        description: "An app that fetches movies from an API and displays them dynamically.",
+        description: `A fully responsive movie wiki application. Using the OMBD API, users can search for 
+            movies using a text input and by year of release using a range slider. I also implemented 
+            pagination and utilised React Router DOM for page navigation.`,
         github: "https://github.com/woodforde/React-Movie-Finder",
         url: "https://react-movie-finder-omega.vercel.app/",
-        image: "./assets/temp_project_img.png"
+        image: "./assets/moviefinder.png"
     },
     {
-        title: "Movie Finder 2",
-        technologies: "React, HTML, CSS",
-        description: "An app that fetches movies from an API and displays them dynamically.",
-        github: "https://github.com/woodforde/React-Movie-Finder",
-        url: "https://react-movie-finder-omega.vercel.app/",
-        image: "./assets/temp_project_img.png"
+        title: "Gmail Clone",
+        technologies: "React, Redux, Firebase, HTML, CSS",
+        description: `A basic email service clone that operates using Firestore databases to store emails. 
+            The application utilises Redux to send and access email information and state. It also uses Firebase 
+            authentication to log in using the users Gmail account.`,
+        github: "https://github.com/woodforde/Gmail-Clone",
+        url: "https://clone-7f10c.web.app/",
+        image: "./assets/gmailclone.png"
+    },
+    {
+        title: "Twitter Clone",
+        technologies: "React, Firebase, HTML, CSS",
+        description: `A basic social media clone that operates using a Firestore database to store user posts 
+            with image capabilities. The application also uses React Flip Move and React Twitter Embed.`,
+        github: "https://github.com/woodforde/Twitter-Clone",
+        url: "https://twitter-clone-d293a.web.app/",
+        image: "./assets/twitterclone.png"
+    },
+    {
+        title: "Hulu Clone",
+        technologies: "React, Next.js, HTML, Tailwind CSS",
+        description: `A basic responsive media website that has very limited functionality. The aim of this 
+        project was to utilise server side rendering for the preview images.`,
+        github: "https://github.com/woodforde/Hulu-Clone",
+        url: "https://hulu-clone-9g6q-m1t21pirp-woodforde.vercel.app/",
+        image: "./assets/huluclone.png"
     },
 ];
 
