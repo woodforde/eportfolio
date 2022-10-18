@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Woodforde</title>
+    <title>Woodforde Eportfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="index.js" defer></script>
+    <!-- Font Awesom Icons -->
     <script src="https://kit.fontawesome.com/63c22fb8eb.js" crossorigin="anonymous"></script>
+    <!-- Email Service -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("vj12xtnfVPvphFNBm");
+    })();
+    </script>
 </head>
-<body>
+<body onmousemove="moveMailButton(event)">
     <!-- Landing Page -->
     <section id="landing-page">
         <!-- Navigation Bar -->
@@ -170,6 +180,14 @@
                     </div>
                     <button class="contactForm__button">Send it my way</button>
                 </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thank you for the message!
+                    <br>
+                    Looking forward to speaking to you soon :)
+                </div>
             </div>
         </div>
     </section>

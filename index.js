@@ -1,20 +1,32 @@
-// template_y03hkqt
-// service_7buibm5
+// template_y03hkqt template_ap4f6rp
+// service_7buibm5 service_ub5bcid
 // vj12xtnfVPvphFNBm
 
 // Global Variables
-const projectListElement = document.querySelector('.project__list');
-const languagesElement = document.querySelector('.languages')
-const frameworksElement = document.querySelector('.frameworks')
-const technologiesElement = document.querySelector('.technologies')
-
 let modalIsOpen = false;
 let darkModeIsOn = false;
 
 // On Click and Submission Functions
 function contact(event) {
     event.preventDefault();
-    console.log(event.target)
+    const loading = document.querySelector('.modal__overlay--loading');
+    const success = document.querySelector('.modal__overlay--success');
+    loading.classList += " modal__overlay--visible";
+
+    emailjs
+        .sendForm(
+            'service_ub5bcid',
+            'template_ap4f6rp',
+            event.target,
+            'vj12xtnfVPvphFNBm'
+        ).then(() => {
+            loading.classList.remove("modal__overlay--visible");
+            success.classList += " modal__overlay--visible";
+        }).catch(() => {
+            loading.classList.remove("modal__overlay--visible");
+            alert(`The email service is temporarily unavailable. 
+                Please contact me through bmwoodforde@gmail.com`)
+        })
 }
 
 function toggleModal() {
@@ -34,6 +46,21 @@ function toggleContrast() {
     }
     darkModeIsOn = !darkModeIsOn;
 }
+
+function moveMailButton(event) {
+    // Can move according to the mouse position but doesnt look as good as click
+
+    // const mailButton = document.querySelector(".mailButton");
+    // const windowWidth = document.documentElement.clientWidth;
+    // const windowHeight = document.documentElement.clientHeight;
+    // const scaleFactor = 1/25;
+
+    // const x = (windowWidth - event.clientX) * scaleFactor;
+    // const y = (windowHeight - event.clientY) * scaleFactor;
+
+    // mailButton.style.transform = `translate(-${x}px, -${y}px)`;
+}
+
 
 // Convert technical skills to HTML
 function technicalSkillToHTML(skillName, skillList) {
@@ -207,6 +234,11 @@ const technologies = [
 
 // Main Function
 function main() {
+    const projectListElement = document.querySelector('.project__list');
+    const languagesElement = document.querySelector('.languages')
+    const frameworksElement = document.querySelector('.frameworks')
+    const technologiesElement = document.querySelector('.technologies')
+
     projectListElement.innerHTML = projectsToHTML();
     languagesElement.innerHTML = technicalSkillToHTML("Languages", languages);
     frameworksElement.innerHTML = technicalSkillToHTML("Frameworks", frameworks);
