@@ -642,6 +642,17 @@ footer {
     }
 }
 
+/* Modal Specific Breakpoint */
+@media (max-width: 680px) {
+    .modal {
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    .modal__half {
+        width: 100%;
+    }
+}
+
 /* Small phones */
 @media (max-width: 480px) {
     .navLink:first-child {
@@ -655,12 +666,8 @@ footer {
         font-size: 18px;
     }
 
-    .modal {
-        height: auto;
-        flex-direction: column-reverse;
-    }
     .modal__half {
-        width: 100%;
+        padding: 40px 48px;
     }
 
     .technicalSkill {
