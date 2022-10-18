@@ -4,6 +4,9 @@
 
 // Global Variables
 const projectListElement = document.querySelector('.project__list');
+const languagesElement = document.querySelector('.languages')
+const frameworksElement = document.querySelector('.frameworks')
+const technologiesElement = document.querySelector('.technologies')
 
 let modalIsOpen = false;
 
@@ -20,6 +23,25 @@ function toggleModal() {
         document.body.classList += (" modal--open");
     }
     modalIsOpen = !modalIsOpen;
+}
+
+// Convert technical skills to HTML
+function technicalSkillToHTML(skillName, skillList) {
+    return `
+        <h3 class="technicalSkill__category">${skillName}</h3>
+        <div class="technicalSkill__list">
+            ${skillList.map((skill, index) => (
+                `<div class="technicalSkill">
+                    <img
+                        class="technicalSkill__img"
+                        src=${skill.image}
+                        alt=""
+                    />
+                    <h4 class="technicalSkill__name">${skill.name}</h4>
+                </div>`
+            )).join('')}
+        </div>
+    `
 }
 
 // Convert Projects Objects to HTML
@@ -78,8 +100,84 @@ const projects = [
     },
 ];
 
+const languages = [
+    {
+        name: "HTML",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png",
+    },
+    {
+        name: "CSS",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png",
+    },
+    {
+        name: "JavaScript",
+        image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+    },
+    {
+        name: "C",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/695px-C_Programming_Language.svg.png",
+    },
+    {
+        name: "Java",
+        image: "https://cdn-icons-png.flaticon.com/512/226/226777.png",
+    },
+    {
+        name: "Python",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png",
+    },
+    {
+        name: "SQL",
+        image: "https://upload.wikimedia.org/wikipedia/en/thumb/6/68/Oracle_SQL_Developer_logo.svg/1200px-Oracle_SQL_Developer_logo.svg.png",
+    },
+]
+
+const frameworks = [
+    {
+        name: "React",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+    },
+    {
+        name: "Next.js",
+        image: "https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png",
+    },
+    {
+        name: "Material-UI",
+        image: "https://mui.com/static/logo.png",
+    },
+    {
+        name: "Tailwind CSS",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png",
+    },
+    {
+        name: "Redux",
+        image: "https://cdn.worldvectorlogo.com/logos/redux.svg",
+    },
+]
+
+const technologies = [
+    {
+        name: "npm",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/540px-Npm-logo.svg.png",
+    },
+    {
+        name: "Git",
+        image: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
+    },
+    {
+        name: "Firebase",
+        image: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
+    },
+    {
+        name: "React Dev Tools",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+    },
+]
+
 // Main Function
 function main() {
     projectListElement.innerHTML = projectsToHTML();
+    languagesElement.innerHTML = technicalSkillToHTML("Languages", languages);
+    frameworksElement.innerHTML = technicalSkillToHTML("Frameworks", frameworks);
+    technologiesElement.innerHTML = technicalSkillToHTML("Technologies", technologies);
 }
 main();

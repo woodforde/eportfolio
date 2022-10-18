@@ -91,12 +91,12 @@
         </header>
         <a  
             class="scroll"
-            href="#projects"
+            href="#technical_skills"
         >
             <div class="scroll__icon click"></div>
         </a>
         <a href="#">
-            <button class="mailButton">
+            <button class="mailButton click" onclick="toggleModal()">
                 <i class="fa-solid fa-envelope"></i>
             </button>
         </a>
@@ -159,10 +159,18 @@
         </div>
     </section>
     <!-- Language Experience -->
-    <section id="languages">
+    <section id="technical_skills">
         <div class="container">
-            <div class="row">
-                <h1 class="section__title"><span class="highlight">Languages</span> I have used before</h1>
+            <div class="row technicalSkills__row">
+                <h1 class="section__title"><span class="highlight">Technical Skills</span> experience</h1>
+                <!-- Languages -->
+                <div class="technicalSkill__container languages"></div>
+                <div class="technicalSkill__divider"></div>
+                <!-- Frameworks -->
+                <div class="technicalSkill__container frameworks"></div>
+                <div class="technicalSkill__divider"></div>
+                <!-- Technology -->
+                <div class="technicalSkill__container technologies"></div>
             </div>
         </div>
     </section>

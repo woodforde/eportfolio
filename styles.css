@@ -115,7 +115,7 @@ nav {
 }
 
 .navLink {
-    margin: 0 8px;
+    margin: 0 16px;
 }
 
 .navLink__anchor {
@@ -204,8 +204,8 @@ nav {
     position: fixed;
     background-color: #242424;
     color: whitesmoke;
-    bottom: 20px;
-    right: 20px;
+    bottom: 32px;
+    right: 32px;
     font-size: 48px;
     height: 100px;
     width: 100px;
@@ -349,6 +349,64 @@ nav,
     visibility: hidden;
     opacity: 0;
     transition: all 400ms;
+}
+
+/* TECHNICAL SKILLS */
+.technicalSkill__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.technicalSkill__category {
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    transform: rotate(180deg);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.technicalSkill__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.technicalSkill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    padding: 20px;
+}
+.technicalSkill:hover .technicalSkill__img {
+    filter: brightness(80%);
+    transform: scale(0.9);
+}
+.technicalSkill:hover .technicalSkill__name {
+    transform: scale(1.1);
+}
+
+.technicalSkill__img {
+    width: 60%;
+    transition: all 300ms ease;
+}
+
+.technicalSkill__name {
+    font-size: 20px;
+    margin-top: 12px;
+    font-weight: 600;
+    transition: all 300ms ease;
+}
+
+.technicalSkill__divider {
+    height: 2px;
+    width: 90%;
+    background-color: #242424;
+    opacity: 0.2;
+    margin: 20px auto;
 }
 
 /* PROJECTS */
