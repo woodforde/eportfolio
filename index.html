@@ -18,6 +18,8 @@
         emailjs.init("vj12xtnfVPvphFNBm");
     })();
     </script>
+    <!-- Animate on Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body onmousemove="moveMailButton(event)">
     <!-- Landing Page -->
@@ -78,9 +80,17 @@
         <!-- Header -->
         <header class="header">
             <div class="headerContent">
-                <h1>Hi,</h1>
-                <h1 class="highlight">I'm Ben</h1>
-                <p>
+                <h1
+                    data-aos="fade"
+                >Hi,</h1>
+                <h1
+                    data-aos="fade"
+                    class="highlight"
+                >I'm Ben</h1>
+                <p
+                    data-aos="fade"
+                    data-aos-delay="200"
+                >
                     I'm a <b class="highlight">Computer Science Graduate</b> with a 
                     strong passion for creating excellent products with a great user experience 
                     high finish quality.
@@ -89,6 +99,9 @@
                 </p>
                 <div class="socialLink__list">
                     <a
+                        data-aos="fade-right"
+                        data-aos-delay="300"
+                        data-aos-offset="-500"
                         class="socialLink click"
                         href="https://www.linkedin.com/in/benjamin-woodforde/"
                         target="_blank"
@@ -96,6 +109,9 @@
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                     <a
+                        data-aos="fade-right"
+                        data-aos-delay="400"
+                        data-aos-offset="-500"
                         class="socialLink click"
                         href="https://github.com/woodforde"
                         target="_blank"
@@ -103,6 +119,9 @@
                         <i class="fa-brands fa-github"></i>
                     </a>
                     <a
+                        data-aos="fade-right"
+                        data-aos-delay="500"
+                        data-aos-offset="-500"
                         class="socialLink click"
                         href="./assets/woodforde_resume.pdf"
                         target="_blank"
@@ -113,13 +132,20 @@
             </div>
         </header>
         <a  
+            data-aos="fade-up"
+            data-aos-offset="-1000"
             class="scroll"
             href="#technical_skills"
         >
             <div class="scroll__icon click"></div>
         </a>
         <a href="#">
-            <button class="mailButton click" onclick="toggleModal()">
+            <button
+                data-aos="fade-left"
+                data-aos-offset="-1000"
+                class="mailButton click"
+                onclick="toggleModal()"
+            >
                 <i class="fa-solid fa-envelope"></i>
             </button>
         </a>
@@ -195,15 +221,27 @@
     <section id="technical_skills">
         <div class="container">
             <div class="row technicalSkills__row">
-                <h1 class="section__title"><span class="highlight">Technical Skills</span> experience</h1>
+                <h1
+                    data-aos="fade"
+                    class="section__title"
+                ><span class="highlight">Technical Skills</span> experience</h1>
                 <!-- Languages -->
-                <div class="technicalSkill__container languages"></div>
-                <div class="technicalSkill__divider"></div>
+                <div
+                    data-aos="fade-right"
+                    class="technicalSkill__container languages"
+                ></div>
+                <div data-aos="fade" class="technicalSkill__divider"></div>
                 <!-- Frameworks -->
-                <div class="technicalSkill__container frameworks"></div>
-                <div class="technicalSkill__divider"></div>
+                <div
+                    data-aos="fade-left"
+                    class="technicalSkill__container frameworks"
+                ></div>
+                <div data-aos="fade" class="technicalSkill__divider"></div>
                 <!-- Technology -->
-                <div class="technicalSkill__container technologies"></div>
+                <div
+                    data-aos="fade-right"
+                    class="technicalSkill__container technologies"
+                ></div>
             </div>
         </div>
     </section>
@@ -211,7 +249,10 @@
     <section id="projects">
         <div class="container">
             <div class="row">
-                <h1 class="section__title">Here are some of my <span class="highlight">projects</span></h1>
+                <h1
+                    data-aos="fade"
+                    class="section__title"
+                >Here are some of my <span class="highlight">projects</span></h1>
                 <ul class="project__list">
                     <!-- Set in index.js -->
                 </ul>
@@ -269,5 +310,13 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            delay: 100,
+            duration: 1000,
+            once: true,
+        });
+    </script>
 </body>
 </html>

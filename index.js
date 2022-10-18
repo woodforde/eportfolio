@@ -68,7 +68,7 @@ function technicalSkillToHTML(skillName, skillList) {
         <h3 class="technicalSkill__category">${skillName}</h3>
         <div class="technicalSkill__list">
             ${skillList.map((skill, index) => (
-                `<div class="technicalSkill">
+                `<div class="technicalSkill" key=${index}>
                     <img
                         class="technicalSkill__img"
                         src=${skill.image}
@@ -82,9 +82,18 @@ function technicalSkillToHTML(skillName, skillList) {
 }
 
 // Convert Projects Objects to HTML
+let direction = true;
+function directionBoolToHTML() {
+    direction = !direction;
+    return direction ? "left" : "right";
+}
 function projectsToHTML() {
     return projects.map((project, index) => (
-        `<li class="project" key=${index}>
+        `<li
+            data-aos="fade-${directionBoolToHTML()}"
+            class="project"
+            key=${index}
+        >
             <div class="project__wrapper">
                 <div class="project__bg"></div>
                 <img
