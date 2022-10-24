@@ -139,6 +139,15 @@ const projects = [
         image: "./assets/moviefinder.png"
     },
     {
+        title: "Amazon Clone",
+        technologies: "React, NextJS, Tailwind CSS, Redux, NextAuth, Firebase",
+        description: `A responsive basic ecommerce application that utilises webhooks, Stripe checkout, and Firebase 
+        in order to make and store purchases.`,
+        github: "https://github.com/woodforde/Amazon-Clone",
+        url: "https://amazon-clone-lime-tau.vercel.app/",
+        image: "./assets/amazonclone.png"
+    },
+    {
         title: "Gmail Clone",
         technologies: "React, Redux, Firebase, HTML, CSS",
         description: `A basic email service clone that operates using Firestore databases to store emails. 
